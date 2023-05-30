@@ -101,6 +101,8 @@ const Blog = () => {
         discription:"Oslo is the capital of Norway and the country's largest city with over 650,000 inhabitants. It is a compact capital city surrounded by the Oslo Fjord on its south side and the national protected forest Marka to its east, north and west."
       }
     ];
+
+   
     
  
      
@@ -131,13 +133,19 @@ const Blog = () => {
                               id ={card.id}
                             />
                         ))}
+
+                        
                                               
                       
-                      </div>  
+                  </div>  
+
+                  
                     </div>
                 
             </ContentWrapper>
-        </div>
+            
+            </div>
+        
     );
 };
 

@@ -92,3 +92,24 @@
             }
             
         }}
+
+
+.similar-card{
+    
+   
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cards {
+    width: 30%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #92A8D1;
+    margin: 10px;
+    border-radius: 19px;
+  }
+.pageTitle{
+    font-size: 35px;
+    padding: 25px;
+}

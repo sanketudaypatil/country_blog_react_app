@@ -97,56 +97,169 @@ const Details = () => {
       discription:"Oslo is the capital of Norway and the country's largest city with over 650,000 inhabitants. It is a compact capital city surrounded by the Oslo Fjord on its south side and the national protected forest Marka to its east, north and west."
     }
   ];
+  const card1=blogData[1]
+  const card2 = blogData[3]
+  const card3 = blogData[5]
 
   const blogDetails = blogData[id-1]
    
 
-    return (
+return (
+    <div className="">
         <div className="detailsBanner">
-          <div className="backdrop-img">
-            <Img src={blogDetails.image} />
-          </div>
-          <div className="opacity-layer"></div>
-            <ContentWrapper> 
-              <div className="content">
-                <div className="left">
-                    <Img
-                    className="posterImg"
-                    src={
-                    blogDetails.image
-                    }
-                    />
-                </div>
-                    <div className="right">
-                        <div className="title">
-                            {`Know About ${blogDetails.title}`}
+            <div className="backdrop-img">
+                <Img src={blogDetails.image} />
+            </div>
+                <ContentWrapper> 
+                    <div className="content">
+                        <div className="left">
+                            <Img
+                                className="posterImg"
+                                src={
+                                blogDetails.image
+                            }
+                            />
                         </div>
-                        <div className="subtitle">
-                            {blogDetails.title}
-                        </div>
+                        <div className="right">
+                            <div className="title">
+                                {`Know About ${blogDetails.title}`}
+                            </div>
+                            <div className="subtitle">
+                                {blogDetails.title}
+                            </div>
                         <div className="row">
                             <div className="overview">
                                 <div className="heading">
                                     Overview
                                 </div>
-                            <div className="description">
-                                {blogDetails.discription}
+                                <div className="description">
+                                    {blogDetails.discription}
+                                </div>
                             </div>
                         </div>
+                        </div>
                     </div>
+                <div>
+                    <Link to={`/`}>
+                        <button className="button" type="button">Back to Home...</button>
+                    </Link>
+
+                </div>
+            </ContentWrapper>
+        
+
+
+
+
+{/* similar card container  */}
+
+        
+      
+            <div className="similar-card-container">
+                <div className="pageTitle">
+                        Similar Cards
+                    </div>
+                <div className="similar-card">
+                    
+
+                {/* card 1 */}
+
+                    <div className="cards">
+                      <Link to={`/blog/${card1.id}`}> 
+                        <div className="imags">
+                            <Img src={card1.image} alt="card__image" className="card__image" />
+                        </div>
+                      </Link>
+                      <div className="card__body">
+                              <span className="tag tag-blue">{card1.title}</span>
+                              <h4 className="title">{`Know About ${card1.title}`}</h4>
+                              <p>{card1.discription}</p>
+                      </div>
+                      <div className="card__footer">
+                              <div className="user">
+                                  <div className="user__info">
+                                      <h5 className="author">{card1.author}</h5>
+                                      <small className="date">{card1.date}</small>
+                                  </div>
+                              </div>
+                      </div>
+                      <div>
+                          <Link to={`/blog/${card1.id}`}>
+                                <button className="button" type="button">Learn More....</button>
+                          </Link>
+                       </div>
+                  </div>
+
+                {/* card 2  */}
+
+                <div className="cards">
+                      <Link to={`/blog/${card2.id}`}> 
+                        <div className="imags">
+                            <Img src={card2.image} alt="card__image" className="card__image" />
+                        </div>
+                      </Link>
+                      <div className="card__body">
+                              <span className="tag tag-blue">{card2.title}</span>
+                              <h4 className="title">{`Know About ${card2.title}`}</h4>
+                              <p>{card2.discription}</p>
+                      </div>
+                      <div className="card__footer">
+                              <div className="user">
+                                  <div className="user__info">
+                                      <h5 className="author">{card2.author}</h5>
+                                      <small className="date">{card2.date}</small>
+                                  </div>
+                              </div>
+                      </div>
+                      <div>
+                          <Link to={`/blog/${card2.id}`}>
+                                <button className="button" type="button">Learn More....</button>
+                          </Link>
+                       </div>
+                  </div>
+
+                  {/* card 3 */}
+
+                  <div className="cards">
+                      <Link to={`/blog/${card3.id}`}> 
+                        <div className="imags">
+                            <Img src={card3.image} alt="card__image" className="card__image" />
+                        </div>
+                      </Link>
+                      <div className="card__body">
+                              <span className="tag tag-blue">{card3.title}</span>
+                              <h4 className="title">{`Know About ${card3.title}`}</h4>
+                              <p>{card3.discription}</p>
+                      </div>
+                      <div className="card__footer">
+                              <div className="user">
+                                  <div className="user__info">
+                                      <h5 className="author">{card3.author}</h5>
+                                      <small className="date">{card3.date}</small>
+                                  </div>
+                              </div>
+                      </div>
+                      <div>
+                          <Link to={`/blog/${card3.id}`}>
+                                <button className="button" type="button">Learn More....</button>
+                          </Link>
+                       </div>
+                  </div>
+                
+                </div>
+                </div>
+                
                 </div>
             </div>
-            <div>
         
-        <Link to={`/`}>
-            <button className="button" type="button">Back to Home...</button>
-        </Link>
+           
+      
+                
+                
 
-    </div>
-
-        </ContentWrapper>
+                
     
             
-</div>)
+)
 };
 export default Details;
